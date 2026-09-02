@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Real-Time Tic-Tac-Toe</h1>
+
+        <div id="login-section" class="card">
+            <h2>Join Game</h2>
+
+            <input 
+                type="text" 
+                id="player-name" 
+                placeholder="Enter your name"
+                maxlength="20"
+            >
+
+            <button id="login-btn">Join Game</button>
+
+            <p id="login-message"></p>
+        </div>
+
+        <div id="game-section" class="hidden">
+
+            <div class="players">
+
+                <div class="player-card" id="player-x">
+                    <h3>Player X</h3>
+                    <p id="player-x-name">Waiting...</p>
+                </div>
+
+                <div class="player-card" id="player-o">
+                    <h3>Player O</h3>
+                    <p id="player-o-name">Waiting...</p>
+                </div>
+
+            </div>
+
+            <div class="status">
+                <h2 id="game-status">Waiting for another player...</h2>
+            </div>
+
+            <div id="board" class="board">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+            <button id="reset-btn">Reset Game</button>
+
+        </div>
+
+        <div id="history-section" class="card">
+
+            <h2>Game History</h2>
+
+            <div id="game-history">
+                <p>No games played yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
